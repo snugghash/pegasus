@@ -29,6 +29,4 @@ peg install ${CLUSTER_NAME} ssh
 peg install ${CLUSTER_NAME} aws
 peg install ${CLUSTER_NAME} environment
 peg install ${CLUSTER_NAME} hadoop
-peg service ${CLUSTER_NAME} hadoop start
 peg install ${CLUSTER_NAME} spark
-peg service ${CLUSTER_NAME} spark start
