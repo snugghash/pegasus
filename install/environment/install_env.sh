@@ -18,7 +18,7 @@ sudo add-apt-repository ppa:openjdk-r/ppa -y
 
 sudo apt-get update
 
-sudo apt-get --yes --force-yes install ssh rsync openjdk-8-jdk scala python-dev python-pip python-numpy python-scipy python-pandas gfortran git supervisor ruby bc
+sudo apt-get --yes --force-yes install ssh rsync openjdk-8-jdk scala python-dev python-pip python-numpy python-scipy python-pandas gfortran git supervisor ruby bc python3 python3-pip python3-setuptools
 sudo dpkg --reconfigure
 
 # get sbt repository
