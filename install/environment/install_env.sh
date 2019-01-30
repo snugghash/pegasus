@@ -19,7 +19,8 @@ sudo add-apt-repository ppa:openjdk-r/ppa -y
 sudo apt-get update
 
 sudo apt-get --yes --force-yes install ssh rsync openjdk-8-jdk scala python-dev python-pip python-numpy python-scipy python-pandas gfortran git supervisor ruby bc python3 python3-pip python3-setuptools
-sudo dpkg --reconfigure
+sudo dpkg --configure -a
+sudo dpkg-reconfigure
 pip install --upgrade pip
 
 # get sbt repository
@@ -31,7 +32,8 @@ sudo apt-get purge maven maven2 maven3
 sudo apt-add-repository -y ppa:andrei-pozolotin/maven3
 sudo apt-get update
 sudo apt-get --yes --force-yes install maven3
-sudo dpkg --reconfigure
+sudo dpkg --configure -a
+sudo dpkg-reconfigure
 
 sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
 
@@ -42,5 +44,6 @@ if ! grep "export JAVA_HOME" ~/.profile; then
   echo -e "export PATH=\$PATH:\$JAVA_HOME/bin" | cat >> ~/.profile
 fi
 
-sudo dpkg --reconfigure
+sudo dpkg --configure -a
+sudo dpkg-reconfigure
 sudo apt-get --yes --force-yes install bc
