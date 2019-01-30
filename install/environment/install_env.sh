@@ -39,4 +39,4 @@ if ! grep "export JAVA_HOME" ~/.profile; then
   echo -e "export PATH=\$PATH:\$JAVA_HOME/bin" | cat >> ~/.profile
 fi
 
-
+sudo apt-get --yes --force-yes install bc
