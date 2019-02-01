@@ -43,3 +43,11 @@ aws_java_sdk_jar=$(find ${spark_lib} -type f | grep aws-java-sdk)
 sed -i '21i spark.hadoop.fs.s3a.impl org.apache.hadoop.fs.s3a.S3AFileSystem' ${SPARK_HOME}/conf/spark-defaults.conf
 sed -i '22i spark.executor.extraClassPath '"${aws_java_sdk_jar}"':'"${hadoop_aws_jar}"'' ${SPARK_HOME}/conf/spark-defaults.conf
 sed -i '23i spark.driver.extraClassPath '"${aws_java_sdk_jar}"':'"${hadoop_aws_jar}"'' ${SPARK_HOME}/conf/spark-defaults.conf
+
+
+# configure PySEAL
+# Get personal github onto the thing, run personal setup script
+git clone https://github.com/snugghash/homomorphically-encrypted-bank
+cd homomorphically-encrypted-bank/PySEAL_fork
+chmod +x non-docker-setup.sh
+./non-docker-setup.sh
