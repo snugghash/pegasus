@@ -14,23 +14,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+sudo rm /var/lib/dpkg/lock
 sudo add-apt-repository ppa:openjdk-r/ppa -y
 
+sudo rm /var/lib/dpkg/lock
 sudo apt-get update
 
 sudo apt-get --yes --force-yes install ssh rsync openjdk-8-jdk scala python-dev python-pip python-numpy python-scipy python-pandas gfortran git supervisor ruby bc python3 python3-pip python3-setuptools
+sudo rm /var/lib/dpkg/lock
 sudo dpkg --configure -a
 pip install --upgrade pip
 
 # get sbt repository
 wget https://dl.bintray.com/sbt/debian/sbt-0.13.7.deb -P ~/Downloads
 sudo dpkg -i ~/Downloads/sbt-*
+sudo rm /var/lib/dpkg/lock
 
 # get maven3 repository
 sudo apt-get purge maven maven2 maven3
 sudo apt-add-repository -y ppa:andrei-pozolotin/maven3
 sudo apt-get update
 sudo apt-get --yes --force-yes install maven3
+sudo rm /var/lib/dpkg/lock
 sudo dpkg --configure -a
 
 sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
@@ -42,5 +47,6 @@ if ! grep "export JAVA_HOME" ~/.profile; then
   echo -e "export PATH=\$PATH:\$JAVA_HOME/bin" | cat >> ~/.profile
 fi
 
+sudo rm /var/lib/dpkg/lock
 sudo dpkg --configure -a
 sudo apt-get --yes --force-yes install bc
