@@ -18,7 +18,7 @@ sudo add-apt-repository ppa:openjdk-r/ppa -y
 
 sudo apt-get update
 
-sudo apt-get --yes --force-yes install ssh rsync openjdk-8-jdk scala python-dev python-pip python-numpy python-scipy python-pandas gfortran git supervisor ruby bc python3 python3-pip python3-setuptools
+sudo apt-get --yes install ssh rsync openjdk-8-jdk scala python-dev python-pip python-numpy python-scipy python-pandas gfortran git supervisor ruby bc python3 python3-pip python3-setuptools\
 	udev\
 	libprocps4\
 	perl\
@@ -51,5 +51,5 @@ fi
 
 sudo rm /var/lib/dpkg/lock
 sudo dpkg --configure -a
-sudo apt-get --yes --force-yes install bc
+sudo apt-get --yes install bc
 sudo dpkg --configure -a
