@@ -44,9 +44,18 @@ source ~/.bashrc
 # Get personal github onto the thing, run personal setup script
 git clone https://github.com/snugghash/homomorphically-encrypted-bank
 cd ~/homomorphically-encrypted-bank/src/data-source/ETH-blockchain/
-sudo apt-get install --yes --force-yes\
-	python3\
-	python3-pip\
-	zlibc
+sudo apt-get install --yes --force-yes \
+	python3 \
+	python3-pip \
+	zlib1g-dev \
+	python-smbus \
+	libsqlite3-dev \
+	tk-dev \
+	libssl-dev \
+	openssl \
+	libffi-dev \
+	libncursesw5-dev \
+	libgdbm-dev \
+	libc6-dev
 pip3 install pipenv
 pipenv install
