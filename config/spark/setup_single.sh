@@ -51,3 +51,4 @@ git clone https://github.com/snugghash/homomorphically-encrypted-bank
 cd homomorphically-encrypted-bank/PySEAL_fork
 chmod +x non-docker-setup.sh
 ./non-docker-setup.sh
+pip3 install confluent_kafka
