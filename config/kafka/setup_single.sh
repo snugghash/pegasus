@@ -34,3 +34,9 @@ done
 
 sudo sed -i 's@localhost:2181@'"${ZK_SERVERS:0:-1}"'@g' /usr/local/kafka/config/server.properties
 
+# Get personal github onto the thing, run personal setup script
+git clone https://github.com/snugghash/homomorphically-encrypted-bank
+cd ~/homomorphically-encrypted-bank/src/data-source/ETH-blockchain/
+sudo apt-get install python3 python3-pip
+pip3 install pipenv
+pipenv install
