@@ -38,5 +38,5 @@ echo "Kafka Started!"
 
 
 cd ~/homomorphically-encrypted-bank/src/data-source/ETH-blockchain/
-pipenv run kafka-producer.py \
+pipenv run python kafka-producer.py \
 	 && echo "Started producer from BigQuery!"
