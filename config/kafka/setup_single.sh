@@ -34,6 +34,10 @@ done
 
 sudo sed -i 's@localhost:2181@'"${ZK_SERVERS:0:-1}"'@g' /usr/local/kafka/config/server.properties
 
+# Install Pyenv, for py3.7
+curl https://pyenv.run | bash
+# Update path
+source ~/.bashrc
 # Get personal github onto the thing, run personal setup script
 git clone https://github.com/snugghash/homomorphically-encrypted-bank
 cd ~/homomorphically-encrypted-bank/src/data-source/ETH-blockchain/
