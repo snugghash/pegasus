@@ -36,6 +36,12 @@ wait
 
 echo "Kafka Started!"
 
+# Create kafka topics
+kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic eth-old
+kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic eth-encrypted
+kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic eth-subtracted
+kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic eth-decrypted
 
 cd ~/homomorphically-encrypted-bank/src/data-source/ETH-blockchain/
 pipenv run python kafka-producer.py \
