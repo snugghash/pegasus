@@ -44,5 +44,5 @@ kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --par
 kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic eth-decrypted
 
 cd ~/homomorphically-encrypted-bank/src/data-source/ETH-blockchain/
-pipenv run python kafka-producer.py \
-	 && echo "Started producer from BigQuery!"
+nohup pipenv run python3 kafka_producer.py > kafka_prod.log &
+echo "Started producer from BigQuery!"
