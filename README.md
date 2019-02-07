@@ -1,3 +1,5 @@
+Still problematic. Some dpkg issues leading to bc not getting installed. At this point, ¯\_(ツ)_/¯
+
 ## Project Pegasus - Flying in the Cloud with Automated AWS Deployment
 
 <div style="text-align:center; margin: 50px 0"><img src ="Pegasus_small.jpg" height="150"/></div>
