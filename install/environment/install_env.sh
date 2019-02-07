@@ -48,6 +48,7 @@ sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
 
 
 sudo pip install nose seaborn boto scikit-learn
+sudo pip install ipython
 #sudo pip install "ipython[notebook]==5.5.0"
 
 if ! grep "export JAVA_HOME" ~/.profile; then
