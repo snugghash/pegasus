@@ -47,8 +47,8 @@ sed -i '23i spark.driver.extraClassPath '"${aws_java_sdk_jar}"':'"${hadoop_aws_j
 
 # configure PySEAL
 # Get personal github onto the thing, run personal setup script
+pip3 install confluent_kafka
 git clone https://github.com/snugghash/homomorphically-encrypted-bank
 cd homomorphically-encrypted-bank/PySEAL_fork
 chmod +x non-docker-setup.sh
 ./non-docker-setup.sh
-pip3 install confluent_kafka
