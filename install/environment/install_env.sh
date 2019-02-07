@@ -16,12 +16,12 @@
 sudo dpkg --configure -a
 
 sudo add-apt-repository ppa:openjdk-r/ppa -y
-wait
+sudo apt-get purge maven maven2 maven3
+sudo apt-add-repository -y ppa:andrei-pozolotin/maven3
 sudo apt-get update
-wait
+
 sudo apt-get --yes install ssh rsync scala python-dev python-pip python-numpy python-scipy python-pandas gfortran git supervisor ruby bc python3 python3-pip python3-setuptools
 #sudo dpkg --configure -a
-wait
 #pip install --upgrade pip
 
 
@@ -34,14 +34,10 @@ sudo apt-get install openjdk-8-jdk
 wget https://dl.bintray.com/sbt/debian/sbt-0.13.7.deb -P ~/Downloads
 sudo dpkg -i ~/Downloads/sbt-*
 sudo dpkg --configure -a
-wait
 
 # get maven3 repository
-#sudo apt-get purge maven maven2 maven3
-#sudo apt-add-repository -y ppa:andrei-pozolotin/maven3
-#sudo apt-get update
-#sudo apt-get --yes install maven3
-#sudo dpkg --configure -a
+sudo apt-get --yes install maven3
+sudo dpkg --configure -a
 
 sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
 
@@ -57,8 +53,6 @@ wait
 
 sudo rm /var/lib/dpkg/lock
 #sudo dpkg --configure -a
-wait
 sudo apt-get --yes install bc
-wait
 sudo rm /var/lib/dpkg/lock
 sudo dpkg --configure -a
