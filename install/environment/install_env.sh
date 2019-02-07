@@ -33,7 +33,7 @@ sudo apt-get install openjdk-8-jdk
 # get sbt repository
 wget https://dl.bintray.com/sbt/debian/sbt-0.13.7.deb -P ~/Downloads
 sudo dpkg -i ~/Downloads/sbt-*
-#sudo dpkg --configure -a
+sudo dpkg --configure -a
 wait
 
 # get maven3 repository
@@ -44,8 +44,6 @@ wait
 #sudo dpkg --configure -a
 
 sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
-
-
 
 sudo pip install nose seaborn boto scikit-learn
 sudo pip install ipython
@@ -62,4 +60,5 @@ sudo rm /var/lib/dpkg/lock
 wait
 sudo apt-get --yes install bc
 wait
-#sudo dpkg --configure -a
+sudo rm /var/lib/dpkg/lock
+sudo dpkg --configure -a
